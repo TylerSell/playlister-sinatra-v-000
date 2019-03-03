@@ -1,7 +1,7 @@
 require_relative "../models/concerns/slugifiable.rb"
 
 class Song < ActiveRecord::Base 
-  belongs_to :artist
+  belongs_to :artists
   has_many :song_genres
   has_many :genres, :through => :song_genres
   extend Slugifiable::ClassMethods
